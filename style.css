@@ -1,0 +1,28 @@
+
+
+/* CSS*/
+h1{
+    color:red;/* h1要素の色を赤にする*/
+    background-color:aqua/* 背景色*/
+}
+
+h2{
+    color:#0000ff;/* カラーコード青色*/
+}
+
+/* コメント*/
+
+.selected{
+    color:#0000ff;/* カラーコード青色*/
+    font-size:30px;/* 文字の大きさ*/
+}
+
+h4{
+    font-family:serif;/* フォント名*/
+    /* フォント名にスペースがある場合は""で囲う*/
+}
+
+img{
+    width:500px;/* 高さ*/
+    height:500px;/* 幅*/
+}
