@@ -65,9 +65,7 @@ body {
   .swipe-container {/* 横スワイプ可能なエリア*/
     display: flex;
     overflow-x: auto; /* 横スクロールを有効化 ◆xとyどっち*/
-    scroll-snap-type: x mandatory; /* スナップ効果を有効化 */
-    -webkit-overflow-scrolling: touch; /* スクロールの滑らかさを追加 */
-    height: 100%;/* 横スクロール領域の高さを画面いっぱいに */
+    
   }
 
   .swipe-item {/*  ◆縦書きにする*/
