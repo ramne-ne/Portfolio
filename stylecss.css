@@ -140,4 +140,8 @@ body {
       cursor: not-allowed;
     }
   
-  
+    iframe{
+      height: 350px;
+      width: 300px;
+      /*transform: scale(0.8);   80%に縮小 */
+    }
