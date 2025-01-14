@@ -10,42 +10,38 @@
 
 <bady><!-- 表示する内容-->
 
-<br>
-<br>
-<br>
-<br>
+  <div class="phone-frame">
+    <div class="screen">
+      <div class="content">
+        <div class="swipe-item" id="item1"><!--◆Image画面◆-->
+          <div class="section">
+            <img src="img/Wedding Reception.png" alt="サンプル画像が表示されます"></img>
+            <p class="date">2024.09.21</p><!-- 日付にクラスを追加-->
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="image">
+          </div>
+          <div class="section">
+             <img src="img/lookbook.png" alt="サンプル画像が表示されます"></img><!-- 画像表示できなかった場合に表示する代替文字-->
+              <p class="date">2024.11.25</p>
+          </div>
+          <div class="section">セクション 2: 他のセクションも同様に横書きです。</div>
+          <div class="section">
+            <img src="img/雑談配信.png" alt="サンプル画像が表示されます"></img>
+            <p class="date">2024.12.16</p>
+          </div>
+          <div class="section">セクション 4</div>
+          <div class="section">セクション 6</div>
+        </div>
 
-<div class="phone-frame">
-  <div class="screen">
-    <div class="content">
-      <div class="swipe-item" id="item1">
-        <div class="section">
-          <img src="img/Wedding Reception.png" alt="サンプル画像が表示されます"></img>
-          2024.09.21
-        </div>
-        <div class="section">
-         <img src="img/lookbook.png" alt="サンプル画像が表示されます"></img><!-- 画像表示できなかった場合に表示する代替文字-->
-         2024.11.25
-        </div>
-        <div class="section">セクション 2: 他のセクションも同様に横書きです。</div>
-        <div class="section">
-          <img src="img/雑談配信.png" alt="サンプル画像が表示されます"></img>
-          2024.12.16
-        </div>
-        <div class="section">セクション 4</div>
-        <div class="section">セクション 6</div>
-
-      </div>
-        <div class="swipe-item" id="item2"><!-- 横スワイプできないから表示されてない-->
+        <div class="swipe-item" id="item2"><!--◆Movie画面◆-->
           <div class="section">
             <video src="video/ずんだもん.mp4" autoplay muted controls></video><!-- 自動再生　コントロールパネル表示-->
-            2024.9.26
+            <p class="date">2024.9.26</p>
             <p>Canva:音声・動画・写真のアップロード、カット、テキストの挿入、カラー・音声の調整、テキストアニメーション、テキストエフェクト、素材の挿入、トランジション</p>
             <p></p>VOICEVOX:ずんだもんの音声の書き出し、声の速度・イントネーションの調整
           </div>
           <div class="section">
             <video src="video/lookbook.mp4" controls></video><!-- コントロールパネル表示-->
-            2024.11.25
+            <p class="date">2024.11.25</p>
             <p>動画・写真のアップロード、カット、動画サイズの変更、テキスト・効果音・BGMの挿入、カラー・音声の調整、テキストアニメーション、テキストエフェクト、素材の挿入、トランジション</p>
           </div>
             <div class="section">セクション 12: 他のセクションも同様に横書きです。</div>
@@ -55,37 +51,44 @@
           <div class="section">セクション 18</div>
           <div class="section">セクション 19</div>
         </div>
+        
+        <div class="swipe-item" id="item3"><!--◆Profile画面◆-->
+          <a href="#自己紹介">自己紹介</a><!-- ハイパーリンク ページ位置を指定して移動する-->
+          <a href="#スキル">スキル</a>
+          <a href="#性格">性格</a>
 
-        <div class="swipe-item" id="item3">
+          <div id="自己紹介">自己紹介</div><!-- ハイパーリンク-->
           <div class="section">セクション 22: 他のセクションも同様に横書きです。</div>
           <div class="section">セクション 23</div>
           <div class="section">セクション 24</div>
           <div class="section">セクション 25</div>
-          <div class="section">セクション 26</div>
-          <iframe src="https://www.foriio.com/ramramnerune"></iframe>
+          <div id="スキル">スキル</div><!-- ハイパーリンク-->
           <div class="section">セクション 27</div>
           <div class="section">セクション 28</div>
           <div class="section">セクション 29</div>
+          <div id="性格">性格</div><!-- ハイパーリンク-->
           <div class="section">セクション 30</div>
+          <div class="section">セクション 31</div>
        </div>        
-           
-        <div class="buttons"><!-- ボタン -->
-          <button id="prevButton" disabled>前へ</button>
-          <button id="nextButton">次へ</button>
-        </div>
+        
 
+        <div class="icons">
+          <img src="img/Imageicon.png" alt="アイコン1" data-target="item1" class="active">
+          <img src="img/Movieicon.png" alt="アイコン2" data-target="item2">
+          <img src="img/Myicon.png" alt="アイコン3" data-target="item3">
+        </div>
+        <div class="content" id="item1" style="display: block;">
+      
         
       </div>
     </div>
   </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
-<!-- テスト-->
-<br>
-<br>
+  <!--◆スマホ枠外◆-->
 
-<h1>こんにちは</h1>
+  <p><a href="https://www.foriio.com/ramramnerune">他の作品</a></p>
 
 
 </bady>
