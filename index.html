@@ -15,16 +15,10 @@
       <div class="content">
         <div class="swipe-item active" id="item1"><!--◆Image画面◆-->
           <div class="section">
-            <img src="img/Wedding Reception.png" alt="サンプル画像が表示されます"></img>
+            <img src="img/Wedding Reception.png" alt="サンプル画像が表示されます"></img><!-- 画像表示できなかった場合に表示する代替文字-->
             <p class="date">2024.09.21<!-- 日付にクラスを追加-->
             <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
             <p>結婚式ムービーのサムネイルを作成しました！</p>
-          </div>
-          <div class="section">
-             <img src="img/lookbook.png" alt="サンプル画像が表示されます"></img><!-- 画像表示できなかった場合に表示する代替文字-->
-              <p class="date">2024.11.25
-              <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
-              <p>あつ森のlookbook動画のサムネイルを作成しました！</p>
           </div>
           <div class="section">セクション 2: 他のセクションも同様に横書きです。</div>
           <div class="section">
@@ -32,6 +26,34 @@
             <p class="date">2024.12.16
             <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
             <p>雑談配信用のサムネイルをイメージして作成しました！</p>
+          </div>
+          <div class="section">
+            <div class="slider">
+              <input type="radio" name="slide" id="slide1" checked>
+              <input type="radio" name="slide" id="slide2">
+              <input type="radio" name="slide" id="slide3">
+              
+              <div class="slider-track"> <!-- スライドトラック -->
+                <div class="slide">
+                  <img src="img/ガチャガチャ紹介_1.png" alt="ガチャガチャ紹介1"></img>
+                </div>
+                <div class="slide">
+                  <img src="img/ガチャガチャ紹介_2.png" alt="ガチャガチャ紹介2"></img>
+                </div>
+                <div class="slide">
+                  <img src="img/ガチャガチャ紹介_3.png" alt="ガチャガチャ紹介3"></img>
+                </div>
+              </div>
+
+              <div class="slider-nav"><!-- ナビゲーション -->
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+              </div>
+            </div>
+            <p class="date">2024.12.17
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
+            <p>商品紹介のInstagram投稿をイメージして作成しました！</p>
           </div>
           <div class="section">セクション 4</div>
           <div class="section">セクション 6</div>
@@ -50,15 +72,25 @@
             <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
             <p>あつ森のlookbook動画を作成しました！</p>
           </div>
-            <div class="section">セクション 12: 他のセクションも同様に横書きです。</div>
-            <div class="section">セクション 15</div>
+          <div class="section">
+            <video src="video/アイキャッチ.mp4" loop autoplay muted controls></video><!-- 繰り返し再生-->
+            <p class="date">2024.12.24
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
+            <p>アイキャッチ動画を作成しました！</p>
+          </div>
+          <div class="section">セクション 12: 他のセクションも同様に横書きです。</div>
+          <div class="section">セクション 15</div>
           <div class="section">セクション 16</div>
           <div class="section">セクション 17</div>
           <div class="section">セクション 18</div>
           <div class="section">セクション 19</div>
         </div>
+
         
-        <div class="swipe-item" id="item3"><!--◆Profile画面◆-->
+        <!-- ーーーーーーーーーー◆Profile画面◆ーーーーーーーーーー -->
+
+        
+        <div class="swipe-item" id="item3">
           <a href="#自己紹介">自己紹介</a><!-- ハイパーリンク ページ位置を指定して移動する-->
           <a href="#スキル">スキル</a>
           <a href="#性格">性格</a>
@@ -101,12 +133,14 @@
 
   <script src="script.js"></script>
 
-
   <!--◆スマホ枠外◆-->
 
-
   
-  <p><a href="https://www.foriio.com/ramramnerune">他の作品</a></p>
+
+  <p><a href="https://www.foriio.com/ramramnerune">他の作品</a></p><!--◆スマホ枠外に表示する-->
+
 
 
 </bady>
+
+
