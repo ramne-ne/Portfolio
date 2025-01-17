@@ -6,11 +6,15 @@ body {/* 全体設定 */
   justify-content: center;
   align-items: center;
   background-color: #f5f5f5;
-  height: 80vh;/* 表示高さ */
+  height: 300vh;/* 表示高さ */
   zoom:120%/* 表示拡大 */
 }
 
 .phone-frame {/* スマホ枠 */
+  position: fixed; /* 画面に固定 */
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* 自分の幅と高さの半分だけ移動して中央に配置 */
   width: 375px; /* スマホ幅（例: iPhone SE, iPhone 12 Miniなど） */
   height: 667px; /* スマホ高さ */
   border: 16px solid black; /* 枠 1本線 色 */
@@ -18,7 +22,6 @@ body {/* 全体設定 */
   overflow: hidden; /* 内容が枠からはみ出さないように */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 影 */
   background-color: white;
-  position: relative;/* 順番 */
 }
 
 .screen {/* スマホの液晶画面に反映する内容 ◆スマホ液晶画面に固定*/
@@ -53,25 +56,32 @@ body {/* 全体設定 */
     text-align: center;/* 中央揃え */
   }
 
-  .swipe-item {/*  ◆縦書きにする*/
-    flex: 0 0 100%;
-    /*margin: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 8px;*/
-    scroll-snap-align: center; /* スナップ位置を中央に */
-    overflow-x: hidden; /* 横方向のスクロールバーを非表示にする */
-    overflow-y: auto; /* 縦スクロールを許可 */
-    width: 375px; /* スマホ幅 */
-    height: 667px; /* 縦スクロールコンテンツの高さをphone-frameに合わせる */
-    padding: 10px;/* 内側の余白 */
-    box-sizing: border-box; /* パディングとボーダーを含める */
-    /*display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;*/
-    display: none; /* デフォルトでは非表示 */
-  }
+
+
+
+
+/* ーーーーーーーーーー◆液晶画面◆ーーーーーーーーーー */
+
+
+.swipe-item {/*  ◆縦書きにする*/
+  flex: 0 0 100%;
+  /*margin: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;*/
+  scroll-snap-align: center; /* スナップ位置を中央に */
+  overflow-x: hidden; /* 横方向のスクロールバーを非表示にする */
+  overflow-y: auto; /* 縦スクロールを許可 */
+  width: 375px; /* スマホ幅 */
+  height: 667px; /* 縦スクロールコンテンツの高さをphone-frameに合わせる */
+  padding: 10px;/* 内側の余白 */
+  box-sizing: border-box; /* パディングとボーダーを含める */
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;*/
+  display: none; /* デフォルトでは非表示 */
+}
   
 .swipe-item.active {
   display: block; /* activeクラスが付いたアイテムだけ表示 */
@@ -97,12 +107,6 @@ body {/* 全体設定 */
   white-space: normal; /* 自然なテキスト折り返し */
 }
 
-iframe{
-  height: 350px;
-  width: 300px;
-  /*transform: scale(0.8);   80%に縮小 */
-}
-
 
 .swipe-item video, /* ビデオと画像のスタイル調整 */
 .swipe-item img {
@@ -112,34 +116,8 @@ iframe{
   margin-bottom: 15px; /* 下に余白を追加 */
 }
 
-.icons {/* icon画像の固定 */
-  position: absolute; /* 画面内で絶対配置 */
-  bottom:0; /* 画面下部に配置 */
-  width: 100%;
-  display: flex;
-  padding: 0 20px; /* 左右に少し余白を追加 */
-  box-sizing: border-box;
-  justify-content: space-around;
-  margin-bottom: 10px;
-}
 
-.icons img {/* icon画像のスタイル */
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  transition: border 0.3s;
-}
-
-.icons img.active {/* icon画像の透明効果 */
-  transition: opacity 0.2s ease; /* 透明効果にかかる時間 */
-  opacity: 0.5; /* カーソルを合わせたときの透明度 */
-}
-
-.content.active {
-  display: block;
-}
+/* ーーーーーーーーーー◆SNSデザイン◆ーーーーーーーーーー */
 
 
 .img {/* heart画像のスタイル */
@@ -160,6 +138,10 @@ iframe{
   margin-right: 10px; /* 画像との間隔を調整 */
   flex-shrink: 0; /* サイズが縮小されないように固定 レスポンシブデザインに対応 */
 }
+
+
+/* ーーーーーーーーーー◆画像スライド◆ーーーーーーーーーー */
+
 
 
 .slider {/* スライダー全体 */
@@ -232,12 +214,24 @@ input[type="radio"] {/* ラジオボタン（非表示） */
 #slide1:checked ~ .slider-nav label[for="slide1"],
 #slide2:checked ~ .slider-nav label[for="slide2"],
 #slide3:checked ~ .slider-nav label[for="slide3"] {
-  background-color: #333;
+  background-color: #8b9396;
 }
 
 
 /* ーーーーーーーーーー◆Profile画面◆ーーーーーーーーーー */
 
+.profile {
+  display: flex; /* フレックスボックスを使って中央揃えにする */
+  justify-content: center; /* 横方向で中央揃え */
+}
+
+.profile img{/* profileiconの設定 */
+  width: 150px; /* 画像の幅を指定 */
+  height: 150px; /* 画像の高さを指定 */
+  object-fit: cover; /* 画像の縦横比を保持したまま中央を切り取る */
+  border-radius: 50%; /* 丸くする */
+  border: 2px solid #e7e7e7; /* 必要に応じて枠線を追加 */
+}
 
 .divider {/* 区切り線 */
   border: none;

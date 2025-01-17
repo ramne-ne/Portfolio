@@ -4,7 +4,9 @@
 <head><!-- 設定-->
     <meta charset="utf-8"> <!-- 書いとくもの-->
     <title>Portfolio</title>  <!-- ページタイトル-->
-    <link rel="stylesheet" href="stylecss.css" type="text/css"><!-- cssの設定を反映-->  
+    <link rel="stylesheet"  href="stylecsshead.css" type="text/css"><!-- cssの設定を反映-->  
+    <link rel="stylesheet"  href="stylecss.css" type="text/css"><!-- cssの設定を反映-->  
+    <link rel="stylesheet"  href="stylecssfoot.css" type="text/css"><!-- cssの設定を反映-->  
 </head>
 
 
@@ -13,6 +15,12 @@
   <div class="phone-frame">
     <div class="screen">
       <div class="content">
+        <div class="header">
+          <p id="clock"></p>
+          <img src="img/Battery.png" alt="充電">
+        </div>
+
+
         <div class="swipe-item active" id="item1"><!--◆Image画面◆-->
           <div class="section">
             <img src="img/Wedding Reception.png" alt="サンプル画像が表示されます"></img><!-- 画像表示できなかった場合に表示する代替文字-->
@@ -27,8 +35,9 @@
             <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
             <p>雑談配信用のサムネイルをイメージして作成しました！</p>
           </div>
+
           <div class="section">
-            <div class="slider">
+            <div class="slider"><!-- ◆レイヤー優先高い -->
               <input type="radio" name="slide" id="slide1" checked>
               <input type="radio" name="slide" id="slide2">
               <input type="radio" name="slide" id="slide3">
@@ -91,6 +100,9 @@
 
         
         <div class="swipe-item" id="item3">
+          <div class="profile">
+            <img src="img/ラムネ.jpg">
+          </div>
           <a href="#自己紹介">自己紹介</a><!-- ハイパーリンク ページ位置を指定して移動する-->
           <a href="#スキル">スキル</a>
           <a href="#性格">性格</a>
@@ -131,16 +143,27 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  
 
   <!--◆スマホ枠外◆-->
+
+  
+  <P>作成期間：</P>
 
   
 
   <p><a href="https://www.foriio.com/ramramnerune">他の作品</a></p><!--◆スマホ枠外に表示する-->
 
+  <P>使用ツール：</P>
 
 
+  <P>こんにちは</P>
+
+
+  <P>こんにちは</P>
+
+  
+  <script src="script.js"></script>
 </bady>
 
 
