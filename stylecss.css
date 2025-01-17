@@ -31,15 +31,6 @@ body {/* 全体設定 */
 
 }
 
-  /*.screen::-webkit-scrollbar {
-    width: 5px;  スクロールバーの幅（Chrome, Safari用） 
-  }*/
-
-  /*.screen::-webkit-scrollbar-thumb {
-    background-color: #bbbbbb;/* スクロールバーの色 
-    border-radius: 10px;/* 角のカーブ 
-  }*/
-
   .content {/* スマホの液晶画面 ◆スマホ高さに合わせる*/
     padding: 4px;/* 要素の領域の内側に設ける余白の大きさを指定 */
     height: 100%;
@@ -76,10 +67,6 @@ body {/* 全体設定 */
   height: 667px; /* 縦スクロールコンテンツの高さをphone-frameに合わせる */
   padding: 10px;/* 内側の余白 */
   box-sizing: border-box; /* パディングとボーダーを含める */
-  /*display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;*/
   display: none; /* デフォルトでは非表示 */
 }
   
@@ -155,7 +142,7 @@ body {/* 全体設定 */
 .slider-track {/* スライドトラック */
   display: flex;
   width: 300%; /* スライド数 × 100% */
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;/* スライドの速さ */
 }
 
 
