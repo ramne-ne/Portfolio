@@ -10,18 +10,27 @@
   padding: 0 20px; /* 左右に余白を追加 */
   box-sizing: border-box;
   justify-content: space-around;
+  align-items: center; /* 垂直方向を中央揃え */
 }
   
 #clock {/* 時計の設定 */
-  font-size: 1rem;
-  color: #333;
+  font-size: 18px;
+  color: #000000;
   margin-right: auto; /* 画像を左側に配置 */
   margin: 10px; /* 余白を調整 */
 }
 
-.header img{/* 充電画像の設定 */
-  width: 30px;
-  height: 30px;
-  margin-left: auto; /* 画像を右側に配置 */
-  margin: 3px; /* 余白を調整 */
+.header img {
+  width: 25px;
+  height: 25px;
+  margin: -10px; /* 基本的な余白 */
 }
+
+.header .wifi {
+  margin-right: -30%; /* Wifiアイコンと充電アイコンの間の間隔 */
+}
+
+.header .battery{/* 充電画像の設定 */
+  margin-left: 0; /* 画像を右側に配置 */
+}
+
