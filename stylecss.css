@@ -39,7 +39,7 @@ body {/* 全体設定 */
     flex-direction: column; /* コンテンツを縦に並べる */
   }
 
-  .content div {/* 液晶とフッターの背景*/
+  .content div {/* 液晶とヘッダー、フッターの背景*/
     margin-bottom: 20px;/* フッターの余白 */
     padding: 20px;/* 文字行間 */
     background-color: #e9e9e9;
@@ -233,3 +233,4 @@ input[type="radio"] {/* ラジオボタン（非表示） */
   margin: 1px 0; /* 上下の余白を調整 */
   font-weight: bold; /* 文字を強調 (任意) */
 }
+
