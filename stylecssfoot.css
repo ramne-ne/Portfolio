@@ -32,4 +32,16 @@
   display: block;
 }
 
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-item span {
+  margin-top: 8px; /* テキストと画像の間の余白 */
+  font-size: 14px; /* テキストサイズ */
+  color: #333; /* テキストカラー */
+}
 
