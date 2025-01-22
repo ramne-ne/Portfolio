@@ -234,3 +234,7 @@ input[type="radio"] {/* ラジオボタン（非表示） */
   font-weight: bold; /* 文字を強調 (任意) */
 }
 
+.info p {
+  text-align: left;
+  margin: 5px 0; /* 行間を少し広げて、要素の間隔を調整 */
+}
