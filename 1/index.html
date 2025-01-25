@@ -1,0 +1,190 @@
+<!DOCTYPE html><!-- バージョン-->
+
+
+<head><!-- 設定-->
+    <meta charset="utf-8"> <!-- 書いとくもの-->
+    <title>Portfolio</title>  <!-- ページタイトル-->
+    <link rel="stylesheet"  href="stylecsshead.css" type="text/css"><!-- cssの設定を反映-->  
+    <link rel="stylesheet"  href="stylecss.css" type="text/css"><!-- cssの設定を反映-->  
+    <link rel="stylesheet"  href="stylecssfoot.css" type="text/css"><!-- cssの設定を反映-->  
+</head>
+
+
+<bady><!-- 表示する内容-->
+
+  <div class="phone-frame">
+    <div class="screen">
+      <div class="content">
+        <div class="header">
+          <p id="clock"></p>
+          <img src="img/Wifi.png" alt="Wifi" class="wifi">
+          <img src="img/Battery.png" alt="充電" class="battery">
+        </div>
+
+
+        <div class="swipe-item active" id="item1"><!--◆Image画面◆-->
+          <div class="section">
+            <img src="img/Wedding Reception.png" alt="サンプル画像が表示されます"></img><!-- 画像表示できなかった場合に表示する代替文字-->
+            <p class="date">2024.09.21<!-- 日付にクラスを追加-->
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
+            <p>結婚式ムービーのサムネイルを作成しました！</p>
+          </div>
+
+          <div class="section">
+            <img src="img/雑談配信.png" alt="サンプル画像が表示されます"></img>
+            <p class="date">2024.12.16
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
+            <p>雑談配信用のサムネイルをイメージして作成しました！</p>
+          </div>
+
+          <div class="section">
+            <div class="slider"><!-- ◆レイヤー優先高い -->
+              <input type="radio" name="slide" id="slide1" checked>
+              <input type="radio" name="slide" id="slide2">
+              <input type="radio" name="slide" id="slide3">
+              
+              <div class="slider-track"> <!-- スライドトラック -->
+                <div class="slide">
+                  <img src="img/ガチャガチャ紹介_1.png" alt="ガチャガチャ紹介1"></img>
+                </div>
+                <div class="slide">
+                  <img src="img/ガチャガチャ紹介_2.png" alt="ガチャガチャ紹介2"></img>
+                </div>
+                <div class="slide">
+                  <img src="img/ガチャガチャ紹介_3.png" alt="ガチャガチャ紹介3"></img>
+                </div>
+              </div>
+
+              <div class="slider-nav"><!-- ナビゲーション -->
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+              </div>
+            </div>
+            <p class="date">2024.12.17
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
+            <p>商品紹介のInstagram投稿をイメージして作成しました！</p>
+          </div>
+          <div class="section">セクション 4</div>
+          <div class="section">セクション 6</div>
+        </div>
+
+        <div class="swipe-item" id="item2"><!--◆Movie画面◆-->
+          <div class="section">
+            <video src="video/ずんだもん.mp4" autoplay muted controls></video><!-- 自動再生　コントロールパネル表示-->
+            <p class="date">2024.9.26
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
+            <p>YouTubeのショート動画を作成しました！</p>
+          </div>
+          <div class="section">
+            <video src="video/lookbook.mp4" controls></video><!-- コントロールパネル表示-->
+            <p class="date">2024.11.25
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
+            <p>あつ森のlookbook動画を作成しました！</p>
+          </div>
+          <div class="section">
+            <video src="video/アイキャッチ.mp4" loop autoplay muted controls></video><!-- 繰り返し再生-->
+            <p class="date">2024.12.24
+            <img src="img/Heart.png" alt="サンプル画像が表示されます" class="img"></p>
+            <p>アイキャッチ動画を作成しました！</p>
+          </div>
+          <div class="section">セクション 12: 他のセクションも同様に横書きです。</div>
+          <div class="section">セクション 15</div>
+          <div class="section">セクション 16</div>
+          <div class="section">セクション 17</div>
+
+        </div>
+
+        
+        <!-- ーーーーーーーーーー◆Profile画面◆ーーーーーーーーーー -->
+
+        
+        <div class="swipe-item" id="item3">
+          <div class="profile">
+            <img src="img/ラムネ.jpg">
+          </div>
+          <a href="#自己紹介">自己紹介</a><!-- ハイパーリンク ページ位置を指定して移動する-->
+          <a href="#スキル">スキル</a>
+          <a href="#性格">性格</a>
+
+          <div id="自己紹介"><!-- ハイパーリンク-->
+            <p class="section-title">自己紹介</p>
+            <hr class="divider"><br><!-- 区切り線 -->
+          </div>
+          <div class="info">
+            <p>すきなこと：デザイン</p><br>
+            <p>希望条件：WEBデザイン、フルリモート勤務</p>
+          </div>
+          <div class="section"><p>セクション 22: 他のセクションも同様に横書きです。</p></div>
+          <div class="section">セクション 23</div>
+          <div class="section">セクション 24</div>
+          <div class="section">セクション 25</div>
+          <div id="スキル"><!-- ハイパーリンク-->
+            <p class="section-title">スキル</p>
+            <hr class="divider"><br><!-- 区切り線 -->
+          </div>
+          <div class="info">
+            <p>保有資格：日商簿記2級、MOS365エクセルExpert</p><br>
+            <p>使用ツール：Slack、Notion、Canva、Inshot、ibispaint、AdobeFresco</p>
+          </div>
+          <div class="section">セクション 27</div>
+          <div class="section">セクション 28</div>
+          <div class="section">セクション 29</div>
+          <div id="性格"><!-- ハイパーリンク-->
+            <p class="section-title">性格</p>
+            <hr class="divider"><br><!-- 区切り線 -->
+          </div>
+          <div class="info">
+            <p>長所：</p><br>
+            <p>短所：</p>
+          </div>
+          <div class="section">セクション 30</div>
+          <div class="section">セクション 31</div>
+       </div>        
+        
+
+        <div class="icons">
+            <div class="icon-item">
+              <img src="img/Imageicon.png" alt="アイコン1" data-target="item1" class="active">
+              <span>Image</span>
+            </div>
+            <div class="icon-item">
+             <img src="img/Movieicon.png" alt="アイコン2" data-target="item2">
+             <span>Movie</span>
+            </div>
+            <div class="icon-item">
+              <img src="img/Myicon.png" alt="アイコン3" data-target="item3">
+              <span>Profile</span>
+            </div>
+          </div>
+          <div class="content" id="item1" style="display: block;">
+      
+        
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!--◆スマホ枠外◆-->
+
+  
+  
+
+  
+
+  <p><a href="https://www.foriio.com/ramramnerune">他の作品</a></p><!--◆スマホ枠外に表示する-->
+
+  <P>作成期間：1ヵ月</P>
+
+
+  <P>こんにちは</P>
+
+
+  <P>こんにちは</P>
+
+  
+  <script src="script.js"></script>
+</bady>
+
+
