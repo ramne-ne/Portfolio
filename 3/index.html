@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <title>ヘアサロン</title>
+    <link rel="icon" href="img/rogo1.png">
+    <link rel="stylesheet" href="styleall.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylemenu.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ヘアサロン予約</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">サロン紹介</a></li>
+                    <li><a href="#gallery">ヘアカタログ</a></li>
+                    <li><a href="#staff">スタッフ紹介</a></li>
+                    <li><a href="#access">アクセス</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-menu">
+                <a href="#services">サービス</a>
+                <a href="pricing.html">メニュー・料金</a>
+                <a href="reservation.html">予約</a>
+                <a href="#contact">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container section-content">
+            <img src="img/salon_interior.png" alt="サロンの内装">
+            <div>
+                <h2>サロン紹介</h2>
+                <p>私たちのヘアサロンでは、快適な空間と上質なサービスをご提供しています。</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>ヘアカタログ</h2>
+            <p>さまざまなヘアスタイルをご紹介します。</p>
+            <div class="button-wrapper">
+                <a href="catalog.html" class="luxury-button">More</a>
+            </div>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <!-- カードのオリジナルセット -->
+                    <div class="card">
+                        <img src="img/design1.png" alt="ヘアスタイル1">
+                        <div class="card-text">紫カラー</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/design2.png" alt="ヘアスタイル2">
+                        <div class="card-text">メンズカット</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/design3.png" alt="ヘアスタイル3">
+                        <div class="card-text">ハイトーンカラー</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/design4.png" alt="ヘアスタイル4">
+                        <div class="card-text">黒金メッシュ</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/design5.png" alt="ヘアスタイル5">
+                        <div class="card-text">ショートカット</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/design6.png" alt="ヘアスタイル6">
+                        <div class="card-text">黒髪ストレート</div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="staff" class="section">
+        <div class="container">
+            <h2>スタッフ紹介</h2>
+            <div class="staff-list">
+                <div class="staff">
+                    <img src="img/staff1.png" alt="スタッフ1" class="round-image">
+                    <h3>山田 太郎</h3>
+                    <p>スタイリスト歴10年。得意なスタイルはショートカット。</p>
+                </div>
+                <div class="staff">
+                    <img src="img/staff2.png" alt="スタッフ2" class="round-image">
+                    <h3>佐藤 花子</h3>
+                    <p>カラーリスト。最新のトレンドカラーをご提案します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="access" class="section">
+        <div class="container">
+            <h2>アクセス</h2>
+            <p>〒123-4567 東京都渋谷区○○町1-2-3</p>
+            <p>最寄駅: 渋谷駅 徒歩5分</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.123456789!2d139.701389!3d35.658123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188abcdef12345!2z44CSMTI1LTAwMTMg44K344Kk44K444O844Or!5e0!3m2!1sja!2sjp!4v1600000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>サービス</h2>
+            <ul>
+                <li>カット</li>
+                <li>カラー</li>
+                <li>パーマ</li>
+                <li>ヘアトリートメント</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>お問い合わせ</h2>
+            <p>電話番号: 012-345-6789</p>
+            <p>メール: info@hairsalon.jp</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ヘアサロン予約サイト. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

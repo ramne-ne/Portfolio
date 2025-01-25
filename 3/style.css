@@ -1,0 +1,393 @@
+
+/* ヘッダー */
+
+header .container {
+    display: flex; /* フレックスボックスを有効化 */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: space-between; /* 子要素を左右に配置 */
+}
+
+header {
+    background-color: #333;
+    color: #ffffff;
+    padding: 8px 0;
+    position: fixed; /* ヘッダーを画面上部に固定 */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* 他の要素より前面に表示 */
+    transition: top 0.3s; /* スクロール時のスムーズなアニメーション */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ヘアカタログギャラリー */
+
+.carousel {/* カルーセル全体 */
+    overflow: hidden; /* スクロール部分を隠す */
+    width: 100%;
+    position: relative;
+    height: 300px; /* 必要に応じて高さを調整 */
+}
+
+/* カルーセルトラック */
+.carousel-track {
+    display: flex;
+    animation: slide 60s ease-in-out infinite; /* 全体60秒間隔 */
+    transform: translateX(0);
+}
+
+/* カード */
+.card {
+    flex: 0 0 33.333%; /* 3枚を画面幅に合わせて表示 */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e6c08c;
+}
+
+/* アニメーション */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* 初期位置 */
+    }
+    20% {
+        transform: translateX(-100%); /* 停止 */
+    }
+    33.333% {
+        transform: translateX(-100%); /* 次の3枚に移動 */
+    }
+    50% {
+        transform: translateX(-100%); /* 停止 */
+    }    
+    100% {
+        transform: translateX(0); /* 元の位置に戻る */
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.card {
+    flex-wrap: nowrap;
+    position: relative;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(83, 83, 83, 0.76);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+
+.button-wrapper {/* ボタン右寄せ用のスタイル */
+    text-align: right; /* 子要素を右寄せ */
+    margin-bottom: 20px; /* ボタンとコンテンツの間に余白を追加 */
+  }
+
+  .luxury-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(45deg, #b7950b, #f0c674);
+    border: 2px solid #b7950b;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .luxury-button:hover {
+    background: linear-gradient(45deg, #f0c674, #b7950b);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .luxury-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+
+/* ヘアカタログ */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0 30px; /* 上下の余白を調整 (上: 20px, 下: 30px) */
+  }
+
+  .categories button {
+    font-family: 'Playfair Display', serif; /* ボタン専用の高級感あるフォント */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #b7950b, #f0c674);
+    border: 2px solid #b7950b;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .categories button:hover {
+    background: linear-gradient(45deg, #f0c674, #b7950b);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  /* ギャラリー全体のスタイル */
+.catalog-gallery {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+    overflow-y: auto; /* 縦スクロールを有効化 */
+    overflow-x: hidden; /* 横スクロールを無効化 */
+    max-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+/* カードを整列 (横3枚ずつ並べるが、狭い場合は自動調整) */
+.catalog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 横3枚固定表示 */
+    gap: 30px; /* カード間のスペース */
+    padding-bottom: 40px;
+}
+
+.catalog-card {/* 各カード */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.catalog-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.catalog-card-text {
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+    color: #4A4A4A;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* カードホバー時のエフェクト */
+.catalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* カテゴリタイトル */
+.catalog-category-title {
+    font-size: 1.5em;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* ギャラリーの背景色と整列 */
+#catalog-gallery {
+    background-color: #f7f7f7;
+    padding-top: 40px;
+}
+
+/* カードテキスト */
+.catalog-card-text {
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+    color: #4A4A4A;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.catalog-card-text:hover {
+    color: #DAA520; /* ゴールド */
+}
+
+/* 縦スクロールスタイル */
+.catalog-gallery::-webkit-scrollbar {
+    overflow-x: hidden; /* 横スクロールバーを消す */
+}
+
+
+
+/* スタッフセクション */
+
+.staff-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.staff {
+    text-align: center;
+    width: 200px;
+}
+
+.staff img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.staff h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.staff p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.round-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;/* スタッフ紹介の囲む枠 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* アクセスセクション */
+
+iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ボタン（必要であれば追加） */
+button {
+    background-color: #e6c08c; /* ゴールド */
+    color: #1c1c1c;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d1a671; /* ゴールドの濃い色 */
+}
+
+/* アニメーション */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+
+/* フッタースタイル */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

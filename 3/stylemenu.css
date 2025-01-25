@@ -1,0 +1,114 @@
+
+/* ハンバーガーメニュー */
+
+.navbar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.hamburger {
+    display: flex; /* 常に表示 */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* 基本スタイル */
+.nav-menu {
+    display: none; /* 初期は非表示 */
+    flex-direction: column;
+    position: fixed; /* 固定表示 */
+    top: 0;
+    right: 0; /* 画面の右側に表示 */
+    height: 100%; /* メニューを画面全体の高さに */
+    width: 300px; /* 開いた際の幅を設定 */
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* 縦スクロール対応 */
+    transition: transform 0.3s ease; /* スライドアニメーション */
+    transform: translateX(100%); /* 初期位置は画面外 */
+}
+
+.nav-menu.active {
+    display: flex;
+    transform: translateX(0); /* メニューを表示 */
+}
+
+/* メニューリンクのスタイル */
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* ハンバーガーアイコンの調整 */
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+}
+
+
+/* スクリーン全体の調整 */
+body.active-menu {
+    overflow: hidden; /* メニュー表示時に背景を固定 */
+}
+
+
+/* 予約フォーム */
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
