@@ -1,0 +1,452 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ーーーーーーーーヘッダーのスタイルーーーーーーーー */
+
+header {
+  position: relative;
+  overflow: hidden; /* ヘッダー内のコンテンツが溢れないように設定 */
+  background-size:cover;/* 背景画像のサイズ設定 領域全体を画像が覆いつくす */
+  color: white;
+  padding: 250px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 動画をヘッダー全体に拡大 */
+  transform: translate(-50%, -50%);
+  z-index: -2; /* 動画を背景に設定 */
+  filter: grayscale(0.5) brightness(0.8); /* モノクロ変換・明るさを調整 */
+}
+
+.dot-overlay {/* 動画にドットフィルターをかける */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);/* ドットの指定 */
+  background-size: 10px 10px; /* ドットのサイズを調整 */
+  z-index: -1; /* 動画の上に配置 */
+  pointer-events: none; /* オーバーレイが操作を妨げないように設定 */
+}
+
+
+header h1 {
+  position: relative;
+  z-index: 1; /* テキストを動画の前面に表示 */
+  font-size: 2.5em; /* 必要に応じて調整 */
+}
+
+
+/* ーーーーーーーーナビゲーションバーのスタイルーーーーーーーー */
+
+#sticky-nav {
+  background-color: #333;/* ナビゲーションの背景色 */
+  position: sticky;
+  top: 0; /* 動画の下に固定したい場合、この値を調整 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ナビゲーションを視覚的に区切る影 */
+  z-index: 10; /* 重なり順序を指定 */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+#sticky-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  color: white;/* ナビゲーションの文字色 */
+}
+
+nav a:hover {
+  color: #4CAF50;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ーーーーーーーー年表のスタイルーーーーーーーー */
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* 初期状態は非表示 */
+  transform: translateX(-50px); /* 横にスライドさせる */
+  transition: all 0.6s ease-in-out;
+}
+
+.timeline-item.active {
+  opacity: 1; /* アクティブな時に表示 */
+  transform: translateX(0); /* 元の位置に戻る */
+}
+
+.timeline-item .year {
+  position: absolute;
+  top: 10px;
+  left: -80px;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff7f50; /* コーラルカラー */
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 15px; /* 丸みを追加 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.date::before {
+  content: "📅"; /* カレンダーアイコン */
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.timeline-item .event {
+  margin-left: 80px; /* 日付のスペース分 */
+}
+
+.timeline-item h3 {
+  font-size: 1.5rem;
+  color: #ff7f50;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* スクロール時にアニメーションを適用 */
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* スクロール時に表示されるアイテム */
+.timeline-item.active {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+
+/* ーーーーーーーーサービスのスタイルーーーーーーーー */
+
+#services ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 30px; /* アイテム間の間隔 */
+  justify-content: center;
+}
+
+#services li {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  width: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 画像とそのコンテナ */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 初期状態の画像設定 */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1); /* 通常サイズ */
+  transition: transform 0.3s ease;
+}
+
+/* ホバー時に画像を拡大 */
+.image-container:hover img {
+  transform: scale(1.1); /* 画像を拡大 */
+}
+
+/* オーバーレイの設定（初期状態で表示） */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(132, 224, 139, 0.7); /* 半透明の青みがかったフィルター */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 1; /* 初期状態で表示 */
+  transform: translateX(0); /* 初期位置 */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* ホバー時のオーバーレイ効果 */
+.image-container:hover .overlay {
+  opacity: 0; /* フェードアウト */
+  transform: translateX(100%); /* 右方向にスライドアウト */
+}
+
+
+/* ーーーーーーーー商品紹介のスタイルーーーーーーーー */
+
+#products {
+  overflow: hidden;/* 枠の中で表示 */
+  height: 600px;/* 枠の高さ */
+}
+
+#carousel {
+  display: flex;/* 横並び */
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.item {
+  flex: 0 0 300px; /* 各要素の幅を固定 */
+  height: 200px;/* 表示される画像などの高さ */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.6; /* 初期は薄く表示 */
+}
+
+/* 中央アイテムに拡大効果 */
+.item.center {
+  transform: scale(1.2); /* 拡大 */
+  opacity: 1; /* 明るく表示 */
+}
+
+.item img, .item video, .item iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;/* 角 */
+}
+
+iframe {
+  pointer-events: none; /* ユーザーが操作できないようにする（必要に応じて） */
+}
+
+
+
+
+
+
+/* ーーーーーーーーフッターのスタイルーーーーーーーー */
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0 0 10px;
+}
+
+footer .sns-btn {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;/* アイコン画像を中央に配置 */
+  gap: 15px;
+  line-height: 0; /* 行間をリセット */
+}
+
+footer .sns-btn a {
+  display: inline-block;
+  color: #e2e2e2; /* 通常のアイコン色 */
+  text-decoration: none;
+  font-size: 32px; /* アイコンサイズ */
+  margin: 0; /* 外側の余白をリセット */
+  padding: 0; /* 内側の余白をリセット */
+  transition: color 0.2s ease, transform 0.2s ease; /* ホバーエフェクト */
+}
+
+footer .sns-btn a:hover {
+  transform: scale(1.1); /* ホバー時に少し大きくする */
+}
+
+
+/* ーーーーーーーー全体のスタイルーーーーーーーー */
+
+.hero {
+  background: linear-gradient(90deg, #f4f4f4, #e8e8e8);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #4CAF50;
+}
+
+h2 {
+  color: #388E3C;
+  border-bottom: 2px solid #4CAF50;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background: #f4f4f4;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+ul li:hover {
+  background: #e8f5e9;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* お問い合わせボタンを右下に固定する */
+.contact-button {
+  position: fixed;
+  bottom: 40px; /* フッターの少し上に配置（調整可能） */
+  right: 20px;
+  background: #333;
+  padding: 15px 15px; /* ボタンのサイズ調整 */
+  border-radius: 50%; /* 完全な丸ボタン */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column; /* アイコンとテキストを縦に並べる */
+  align-items: center; /* アイコンとテキストを中央揃え */
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-button i {
+  color:#ffffff;
+  font-size: 24px; /* アイコンのサイズ */
+  margin-bottom: 5px; /* アイコンとテキストの間隔 */
+}
+
+.contact-button a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px; /* テキストのサイズ */
+  font-weight: bold;
+}
+
+/* ホバー時に揺れるアニメーション */
+.contact-button:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

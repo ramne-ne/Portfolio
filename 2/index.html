@@ -1,0 +1,204 @@
+<!DOCTYPE html><!-- バージョン-->
+
+
+<head><!-- 設定-->
+    <meta charset="utf-8"> <!-- 書いとくもの-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要</title><!-- ページタイトル-->
+    <link rel="stylesheet"  href="style.css" type="text/css"><!-- cssの設定を反映-->   
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><!-- アイコン画像-->
+</head>
+
+
+<bady><!-- 表示する内容-->
+  <header>
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="video/home.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="dot-overlay"></div>
+        <h1>株式会社サンプル</h1>
+    </header>
+
+
+    <nav id="sticky-nav">
+        <a href="#about">会社沿革</a>
+        <a href="#services">サービス</a>
+        <a href="#products">商品紹介</a>
+        <a href="#careers">採用ページ</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <div class="hero">
+                <h1>ようこそ、株式会社サンプルへ</h1>
+                <p>私たちは、信頼と革新を大切にしています。</p>
+            </div>
+            <h2>会社沿革</h2>
+            <p>株式会社サンプルは、2025年に設立され、ITソリューションを中心に多くのお客様に価値を提供してきました。</p>
+            
+            <div class="timeline">
+                <ul>
+                    <li class="timeline-item">
+                        <div class="year">2025年</div>
+                        <div class="content">
+                            <span class="date">1月22日</span>
+                            <div class="event">
+                                <h3>Webサイト公開</h3>
+                                 <p>公式Webサイトを公開し、会社概要やサービス内容を紹介開始。</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="event">
+                            <h3>動画差し込み</h3>
+                            <p>動画を繰り返し再生されるようにして、ドットフィルターを実装。</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="event">
+                            <h3>メニューバー</h3>
+                            <p>動画を目立たせるため、メニューバーを動画の下に表示。</p>
+                            <p>動画の下から固定。</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="event">
+                            <h3>お問い合わせフォーム</h3>
+                            <p>お問い合わせフォームを右下へ固定配置。</p>
+                            <p>カーソルを合わせると揺れる動きを実装。</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="event">
+                            <h3>フッター</h3>
+                            <p>GitHubとYoutubeの連携。</p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <span class="date">1月23日</span>
+                        <div class="event">
+                            <h3>画像アニメーションの実装</h3>
+                            <p>画像にカーソルを合わせると、フィルターがフェードインするアニメーションを実装。</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="event">
+                            <h3>カルーセルの実装</h3>
+                            <p>画像や動画などのコンテンツをスライドさせて切り替えるように表示。</p>
+                            <p>Javascriptでコンテンツを右端へ複製して、繰り返しでスライドされるように実装。</p>
+                        </div>
+                    </li>
+                    
+                    <li class="timeline-item">
+                        <span class="date">1月25日</span>
+                        <div class="event">
+                            <h3>画像アニメーションのアップデート</h3>
+                            <p>画像にフィルターをかけて表示し、カーソルを合わせると、フィルターがフェードアウトするアニメーションへアップデート。</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <span class="date">現在</span>
+                        <div class="event">
+                            <h3>成長を続ける企業</h3>
+                            <p>現在も継続的に成長を続け、革新的な技術とサービスを提供しています。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="services">
+            <h2>サービス</h2>
+            <ul>
+                <li>
+                    <div class="image-container">
+                        <img src="img/imgweb_design.png" alt="WEBデザイン">
+                        <div class="overlay">
+                            <p>WEBデザイン</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-container">
+                        <img src="img/video_editing.png" alt="動画編集">
+                        <div class="overlay">
+                            <p>動画編集</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-container">
+                        <img src="img/image_editing.png" alt="画像加工">
+                        <div class="overlay">
+                            <p>画像加工</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="products">
+            <h2>商品紹介</h2>
+            <p>私たちの製品は、業界最先端の技術を駆使しており、お客様に高品質な体験を提供します。</p><br>
+            <div id="carousel">
+                <!-- 画像アイテム -->
+                <div class="item">
+                    <img src="img/image1.png" alt="製品A">
+                </div>
+                <!-- 動画アイテム -->
+                <div class="item center">
+                    <video autoplay muted loop>
+                        <source src="video/background-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item">
+                 <img src="img/image2.png" alt="製品B">
+                </div>
+                <!-- iframeアイテム -->
+                <div class="item">
+                   <iframe src="https://ramne-ne.github.io/Portfolio/" frameborder=0 scrolling="no"></iframe><!-- 枠線削除・スクロールバー削除 -->
+                </div>
+            </div>
+        </section>
+
+        <section id="careers">
+            <h2>採用ページ</h2>
+            <p>株式会社サンプルでは、常に新しい仲間を募集しています。あなたも私たちのチームに加わりませんか？</p>
+            <ul>
+                <li>エンジニア</li>
+                <li>プロジェクトマネージャー</li>
+                <li>営業スタッフ</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <div class="contact-button">
+        <i class="fa-regular fa-envelope"></i>
+        <a href="mailto:example@example.com">お問い合わせは<br>こちら<br></a>
+        <i class="fas fa-angle-down fa-position-bottom"></i>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 株式会社サンプル. All Rights Reserved.</p>
+        <ul class="sns-btn">
+            <a href="https://github.com/ramne-ne" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://youtu.be/sqpwIf4N1NQ" target="_blank" rel="noopener">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </ul>
+    </footer>
+  
+
+  
+  
+</bady>
+
+
