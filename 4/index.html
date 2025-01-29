@@ -1,0 +1,130 @@
+<!DOCTYPE html><!-- バージョン-->
+<html lang="ja">
+
+<head><!-- 設定-->
+    <meta charset="utf-8"> <!-- 書いとくもの-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECショップ</title><!-- ページタイトル-->
+    <script src="script.js"></script>
+    <link rel="stylesheet"  href="style.css" type="text/css"><!-- cssの設定を反映-->   
+</head>
+
+
+<bady><!-- 表示する内容-->
+ 
+    <header class="navbar">
+        <h1>ECショップ</h1>
+        <div>
+            <input type="text" placeholder="商品を検索...">
+            <button>検索</button>
+        </div>
+        <form action="cart.html">
+            <button type="submit">🛒 カート</button>
+        </form>
+    </header>
+    <main>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="img/item1.png" alt="商品1">
+                <h2>商品1</h2>
+                <p>¥2,000</p>
+                <button onclick="addToCart('商品1', 2000, url(img/item1.png))">カートに追加</button>
+            </div>
+            <div class="product-card">
+                <img src="img/item2.png" alt="商品2">
+                <h2>商品2</h2>
+                <p>¥3,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item3.png" alt="商品3">
+                <h2>商品3</h2>
+                <p>¥4,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item4.png" alt="商品4">
+                <h2>商品4</h2>
+                <p>¥5,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item5.png" alt="商品5">
+                <h2>商品5</h2>
+                <p>¥8,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item6.png" alt="商品6">
+                <h2>商品6</h2>
+                <p>¥8,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item7.png" alt="商品7">
+                <h2>商品7</h2>
+                <p>¥4,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item8.png" alt="商品8">
+                <h2>商品8</h2>
+                <p>¥5,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item9.png" alt="商品9">
+                <h2>商品9</h2>
+                <p>¥1,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item10.png" alt="商品10">
+                <h2>商品10</h2>
+                <p>¥2,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item11.png" alt="商品11">
+                <h2>商品11</h2>
+                <p>¥2,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+            <div class="product-card">
+                <img src="img/item12.png" alt="商品12">
+                <h2>商品12</h2>
+                <p>¥3,000</p>
+                <form action="cart.html">
+                    <button type="submit">カートに追加</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 ECショップ
+    </footer>
+  
+
+</bady>
+
+</html>

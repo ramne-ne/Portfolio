@@ -1,0 +1,43 @@
+<!DOCTYPE html><!-- バージョン-->
+<html lang="ja">
+
+<head><!-- 設定-->
+    <meta charset="utf-8"> <!-- 書いとくもの-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECショップ</title><!-- ページタイトル-->
+    <script src="script.js"></script>
+    <link rel="stylesheet"  href="style.css" type="text/css"><!-- cssの設定を反映-->   
+</head>
+
+
+<bady><!-- 表示する内容-->
+ 
+    <header class="navbar">
+        <h1>ECショップ</h1>
+        <div>
+            <input type="text" placeholder="商品を検索...">
+            <button>検索</button>
+        </div>
+        <form action="cart.html">
+            <button>🛒 カート</button>
+        </form>
+    </header>
+
+    <main class="cart-container">
+        <div class="cart-item">
+            <div id="cart-items"></div>
+        <div class="total-section" id="cart-total">
+            合計: ¥0
+        </div>
+        <button class="checkout-button">購入手続きへ</button>
+
+    </main>
+
+    <footer>
+        &copy; 2025 ECショップ
+    </footer>
+  
+
+</bady>
+
+</html>
