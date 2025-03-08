@@ -12,13 +12,11 @@
             text-align: center;
             background: linear-gradient(135deg, #a18cd1, #fbc2eb);
             margin: 0;
-            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             justify-content: space-between;
             flex-direction: column;
-            height: 100vh; /* ビューポートの高さを100%に設定 */
         }
         .container {
             max-width: 900px;
@@ -32,20 +30,17 @@
         .portfolio-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            margin-top: 20px;
         }
         .portfolio-item {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
+            background: rgba(32, 64, 180, 0.4); /* 明るめのブルーで優しい印象 */
+            backdrop-filter: blur(15px); /* 背景をぼかす */
+            padding: 20px;/* 枠の中の余白 */
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 影を強めて立体感を出す */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
             flex-direction: column; /* 子要素を縦に並べる */
-            align-items: center; /* 子要素を中央揃え */
             margin: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4); /* 少し強めの白枠 */
         }
         .portfolio-item:hover {
             transform: translateY(-5px);
@@ -54,7 +49,6 @@
         .portfolio-item h2 {
             color: #fff;
             font-size: 1.6em;
-            margin-bottom: 10px;
         }
         .portfolio-item p, .portfolio-item ul {
             color: #fff;
@@ -62,20 +56,20 @@
             margin: 10px 0 0 20px;
         }
         .portfolio-item ul {
-            padding-left: 0; /* デフォルトのリストのインデントを削除 */
             display: flex;
             flex-direction: column; /* 縦方向に並べる */
             justify-content: center; /* 縦方向に中央揃え */
+            text-align: left; /* リスト項目を左寄せ */
+            padding-left: 120px;/* 左寄せの位置調整 */
         }
         
         .portfolio-item li {
-            margin-bottom: 10px;
+            margin-bottom: 10px;/* リストの文字間隔 */
 
         }
         .portfolio-item p {
             display: flex;
             align-items: center;
-            margin: 10px 0;
         }
         .portfolio-item p span {
             margin-right: 10px; /* テキストとボタンの間に隙間を作る */
@@ -84,7 +78,7 @@
             text-decoration: none;/* リンク下線なし */
             color: #fff;
             background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            padding: 12px 24px;
+            padding: 12px 24px;/* ボタンの中の余白 */
             border-radius: 30px;
             font-weight: bold;
             transition: all 0.3s ease;
@@ -99,6 +93,8 @@
             display: flex;
             align-items: center; /* 垂直方向に中央揃え */
             gap: 8px; /* アイコンとテキストの間隔 */
+            justify-content: center; /* 水平方向に中央配置 */
+            width: 100%;
         }
         .link-container img {
             filter: brightness(0) invert(1);
@@ -118,23 +114,20 @@
             text-decoration: none;
             color: #fff;
             background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            padding: 8px 16px; /* ボタン内の余白調整 */
             border-radius: 30px;
             font-weight: bold;
             transition: all 0.3s ease;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
             white-space: nowrap; /* ボタン内のテキストが折り返さないように */
         }
-
-
-        footer {
-            align-items: center;
-            padding-top: 30px;
-            padding-bottom: 20px;
-            font-size: 0.9em;
-            color: #666;
-            margin-top: auto; /* フッターを下部に固定 */
+        .link-container span {
+            background: #ff9cba;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold; /* 文字を見やすくするためのオプション */
         }
+
 
     </style>
 </head>
@@ -144,17 +137,49 @@
         <div class="portfolio-list">
             <div class="portfolio-item">
                 <h2>コードで作成したポートフォリオ</h2>
+                <ul style="padding-bottom: 50px;">
+                    <li>企画案作成：figmaでデザイン案作成</li>
+                    <li>コーディング：HTML,CSS,Javascriptでポートフォリオ3件作成</li>
+                    <li>チェック：chromeのデベロッパーツールでエラー特定、ChatGPT活用</li>
+                    <li>公開：GitHubで公開</li>
+                </ul>
                 <p class="link-container">
-                    <span>GitHub上のサイトURL：</span>
-                    <a href="0/index.html" target="_blank" class="btn">
+                    <span>1つ目ポートフォリオサイトURL：</span>
+                    <a href="1/index.html" target="_blank" class="btn" style="gap: 8px;">
+                        <i class="fa-brands fa-github"></i> こちら
+                    </a>
+                </p>
+                <ul style="padding-bottom: 50px;">
+                    <li>スマホ画面上にSNS風のデザインで作成</li>
+                    <li>ラジオボタンで画像スライド実装</li>
+                    <li>動画の自動再生、コントロールパネル表示、ミュート機能実装</li>
+                    <li>アイコン画像にID設定でページ遷移機能追加</li>
+                </ul>
+                <p class="link-container">
+                    <span>2つ目ポートフォリオサイトURL：</span>
+                    <a href="2/index.html" target="_blank" class="btn" style="gap: 8px;">
+                        <i class="fa-brands fa-github"></i> こちら
+                    </a>
+                </p>
+                <ul style="padding-bottom: 50px;">
+                    <li>企業サイト風のデザインで作成</li>
+                    <li>Canvaで作成した動画を繰り返し再生し、ドットフィルターを実装</li>
+                    <li>動画下のメニューバーを固定</li>
+                    <li>画像にカーソルを合わせるとフィルターがフェードインするアニメーション実装</li>
+                    <li>画像・動画の自動スライドカルーセル実装</li>
+                </ul>
+                <p class="link-container">
+                    <span>3つ目ポートフォリオサイトURL：</span>
+                    <a href="3/index.html" target="_blank" class="btn" style="gap: 8px;">
                         <i class="fa-brands fa-github"></i> こちら
                     </a>
                 </p>
                 <ul>
-                    <li>企画案作成：figmaでデザイン案作成</li>
-                    <li>コーディング：HTML,CSS,Javascriptでポートフォリオ3件作成</li>
-                    <li>チェック：chromeのデベロッパーツールでエラー特定、ChatGPT活用</li>
-                    <li>公開：GitHubで公開/li>
+                    <li>予約サイト風のデザインで作成</li>
+                    <li>ハンバーガーメニューを実装</li>
+                    <li>上スクロール時にメニューバーを表示</li>
+                    <li>絞り込み検索機能を実装</li>
+                    <li>ファビコン設定</li>
                 </ul>
             </div>
         </div>
@@ -194,7 +219,6 @@
                 </ul>
             </div>
         </div>
-        <footer>© 2025 </footer>
     </div>
     
 </body>
